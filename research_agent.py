@@ -62,6 +62,15 @@ def main():
     
     # Create and run the graph
     research_graph = create_research_graph()
+
+    # Save graph image for README
+    try:
+        image_data = research_graph.get_graph().draw_mermaid_png()
+        with open("research_graph.png", "wb") as f:
+            f.write(image_data)
+        print("✅ Graph image saved to research_graph.png")
+    except Exception as e:
+        print(f"❌ Could not save graph image: {e}")
     
     initial_state = {
         "query": args.query,
