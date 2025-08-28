@@ -46,3 +46,6 @@ MANIFEST
 *.swp
 *.swo
 *~
+
+# Generated images
+research_graph.png
